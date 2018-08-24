@@ -1,0 +1,7 @@
+{
+  "name": "Intelligent_Baket",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
