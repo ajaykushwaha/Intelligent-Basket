@@ -44,17 +44,18 @@
           </ion-col>
       </ion-row>
    </ion-grid> -->
-
-  <ul>
-    <!-- <li id="lilist1">Billy<span class="close" (click)="logEvent($event)" id="list1">x</span></li> -->
-    <li>Billy<span class="close" (click)="logEvent($event)" id="close1">x</span></li>
-    <li>Tilly<span class="close" (click)="logEvent($event)" id="close2">x</span></li>
-    <li>Lilly<span class="close" (click)="logEvent($event)" id="close3">x</span></li>
+<h3 id="home-heading1" style="color:red;text-align: center;">Items in My list ({{ItemsInList.length}})</h3><br>
+  <div *ngFor="let item of ItemsInList ;let i = index" >
+    <ul>
+      <li>{{ item }}<span class="close" (click)="removeItems($event)" id="{{ 'InListItem' + i }}">x</span></li>
   </ul>
+  </div><br>
+  <hr>
+<h3 id="home-heading1" style="color:red;text-align: center;">Add Items to My list :</h3><br>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-      <ion-list>
-        <ion-item *ngFor="let item of items">
-          {{ item }}
-        </ion-item>
-      </ion-list>
+        <div *ngFor="let item of ItemsListTemp ;let i = index" >
+          <ul>
+            <li  (click)="addItems($event)" id="{{ 'OutListItem' + i }}">{{ item }}</li>
+        </ul>
+        </div>
 </ion-content>

@@ -5,6 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { ProfilePage } from '../pages/profile/profile'
+import { CartPage } from '../pages/cart/cart'
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +26,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'My List', component: ListPage }
+      { title: 'My List', component: ListPage },
+      { title: 'My profile', component: ProfilePage },
+      { title: 'My Cart', component:CartPage}
     ];
 
   }

@@ -38,3 +38,8 @@ ul li:hover {
 }
 
 .close:hover {background: #bbb;}
+
+.addlist {
+	cursor: pointer;
+}
+.addlist:hover{background-color: #eee;}
