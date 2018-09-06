@@ -1,5 +1,5 @@
+<link href="assets/css/cart.css" rel="stylesheet">
 <ion-header>
-
   <ion-navbar>
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -10,6 +10,13 @@
 </ion-header>
 
 
-<ion-content>
 
+<ion-content>
+<h3 id="home-heading1" style="color:red;text-align: center;">Items in My Cart ({{ItemsInCart.length}})</h3><br>
+  <div *ngFor="let item of ItemsInCart ;let i = index" >
+    <ul>
+      <li>{{ item }}<span class="close" (click)="removeItems($event)" id="{{ 'ItemsInCart' + i }}">x</span></li>
+  </ul>
+  </div><br>
+  <hr>
 </ion-content>
