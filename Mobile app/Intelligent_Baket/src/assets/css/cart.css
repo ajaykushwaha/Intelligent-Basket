@@ -27,6 +27,18 @@ ul li:hover {
   background-color: #eee;
 }
 
+.last_but {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   font-size: 25px;
+}
+
+.tplabel{
+
+}
 /* Style the close button (span) */
 .close {
   cursor: pointer;
@@ -38,3 +50,4 @@ ul li:hover {
 }
 
 .close:hover {background: #bbb;}
+
