@@ -28,29 +28,25 @@
 <div [ngSwitch]="cart">
   <div *ngSwitchCase="'unbilled'">
   	<h3 id="home-heading1" style="color:red;text-align: center;">Items in My Cart ({{ItemsInCart.length}})
-  	</h3>
-	<hr>
-   <div *ngFor="let item of ItemsInCart ;let i = index" >
-    <ul><li>
-    	<ion-grid>
-		  <ion-row>
-		    <ion-col col-4>{{ item[0] }}</ion-col>
-		    <ion-col col-4>{{ item[1] }}</ion-col>
-		    <ion-col col-4>₹. {{ item[2] }}</ion-col>
-		  </ion-row>
-		</ion-grid>
-    	<span class="close" (click)="removeItems($event)" id="{{item}}">x</span>
-    </li></ul>
-  </div>
-  <br>
-  <br>
-  <br>
-
-  <div class="last_but">
-  	<span class="tplabel"><span>Total Price = </span><span >2000</span></span>
-    <button ion-button color="light" round style="float: right;
-    right: 10%;">Pay</button>
-   </div>
+	  	</h3>
+		<hr>
+	   <div *ngFor="let item of ItemsInCart ;let i = index" >
+	    <ul><li>
+	    	<ion-grid>
+			  <ion-row>
+			    <ion-col col-4>{{ item[0] }}</ion-col>
+			    <ion-col col-4>{{ item[1] }}</ion-col>
+			    <ion-col col-4>₹. {{ item[2] }}</ion-col>
+			  </ion-row>
+			</ion-grid>
+	    	<span class="close" (click)="removeItems($event)" id="{{item}}">x</span>
+	    </li></ul>
+	  </div>
+	  <br><br><br>
+	  <div class="last_but">
+	  <span class="tplabel"><span>Total Price = </span><span >2000</span></span>
+	  <button ion-button color="light" round style="float: right;right: 10%;">Pay</button>
+	  </div>
   </div>
 
   <div *ngSwitchCase="'purchased'">
