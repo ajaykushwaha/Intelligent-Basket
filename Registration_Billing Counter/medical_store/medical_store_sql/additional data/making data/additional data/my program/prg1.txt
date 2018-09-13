@@ -1,0 +1,22 @@
+Sub Macro1()
+
+    Dim i As Integer
+    Dim str1 As String
+    Dim str2 As String
+    Dim str3 As String
+    
+   For i = 1 To 100 Step 1
+      
+   str1 = "K" & i
+    Columns("A:A").Select
+    Selection.Find(What:=Range(str1).Value, After:=ActiveCell, LookIn:=xlFormulas, LookAt _
+        :=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, MatchCase:= _
+        False, SearchFormat:=False).Activate
+        
+    str2 = ActiveCell.Address
+    str2 = Mid(str2, 4)
+    str2 = "E" & str2
+    str3 = "L" & i
+    Range(str3).Value = Range(str2).Value
+    Next
+End Sub

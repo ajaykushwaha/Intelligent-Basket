@@ -1,0 +1,13 @@
+TODO
+
+Customer->new->delete->update->show
+
+Medicine_list->new->delete->update->show
+
+order->(new->)delete->update->show for admin ////---for normal order->(new->)show
+
+Staff->new->delete->update->show for admin ////---for normal Staff->show
+
+bill->(new->)delete->update->show for admin////---for normal bill->(new->)show
+
+Expired_medicince ->delete->update->show
