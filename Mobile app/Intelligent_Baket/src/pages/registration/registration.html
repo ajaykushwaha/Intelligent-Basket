@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registration</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<form>
+  <fieldset>
+    <legend>Personal information:</legend>
+	    <ion-list>
+
+		  <ion-item>
+		    <ion-label floating>First name</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Last name</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Mobile</ion-label>
+		    <ion-input type="number"></ion-input>
+		  </ion-item>
+		  <br>
+
+		</ion-list>
+  </fieldset>
+  <br><br>
+  <fieldset>
+    <legend>Address information:</legend>
+	    <ion-list>
+
+		  <ion-item>
+		    <ion-label floating>First Line</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Second Line</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		  <ion-item>
+		    <ion-label floating>Third Line</ion-label>
+		    <ion-input type="text"></ion-input>
+		  </ion-item>
+
+		</ion-list>
+  </fieldset>
+</form>
+<br>
+<button ion-button icon-end full large style="background-color:red " (click)="verifyOTP()">
+  Next
+  <ion-icon name="arrow-dropright-circle" ></ion-icon>
+</button>
+
+</ion-content>

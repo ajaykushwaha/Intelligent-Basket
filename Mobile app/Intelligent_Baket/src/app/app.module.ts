@@ -8,6 +8,8 @@ import { CartPage } from '../pages/cart/cart'
 import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { WelcomePage } from '../pages/welcome/welcome'
+import { RegistrationPage } from '../pages/registration/registration';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     ProfilePage,
-    CartPage
+    CartPage,
+    WelcomePage,
+    RegistrationPage
+
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     ProfilePage,
-    CartPage
+    CartPage,
+    WelcomePage,
+    RegistrationPage
   ],
   providers: [
     StatusBar,
