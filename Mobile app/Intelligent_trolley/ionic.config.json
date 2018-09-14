@@ -1,7 +1,0 @@
-{
-  "name": "Intelligent_trolley",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
