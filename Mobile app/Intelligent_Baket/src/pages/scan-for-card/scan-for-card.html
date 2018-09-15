@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Scan QR-Code</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <div>
+    <button ion-button block (click) = "scan()">Scan</button>
+    <div >
+      <label>
+        Your Qrcode is {{scanData.text}}
+      </label>
+      <br>
+      <span>
+      </span>
+    </div>
+  </div>
+</ion-content>

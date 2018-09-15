@@ -10,6 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WelcomePage } from '../pages/welcome/welcome'
 import { RegistrationPage } from '../pages/registration/registration';
+import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,11 @@ import { RegistrationPage } from '../pages/registration/registration';
     ProfilePage,
     CartPage,
     WelcomePage,
-    RegistrationPage
+    RegistrationPage,
+    ScanForCardPage
 
   ],
+ 
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
@@ -34,11 +38,13 @@ import { RegistrationPage } from '../pages/registration/registration';
     ProfilePage,
     CartPage,
     WelcomePage,
-    RegistrationPage
+    RegistrationPage,
+    ScanForCardPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

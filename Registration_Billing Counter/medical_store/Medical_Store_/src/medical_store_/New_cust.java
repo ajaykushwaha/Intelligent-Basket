@@ -386,13 +386,11 @@ public class New_cust extends javax.swing.JFrame {
         /* Create and display the form */
        
        
-        System.out.println("main)");
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new New_cust().setVisible(true);
             }
         });
-        System.out.println("main2");
     }
     
 

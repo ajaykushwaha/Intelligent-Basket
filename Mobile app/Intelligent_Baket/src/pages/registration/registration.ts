@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { ScanForCardPage } from  '../scan-for-card/scan-for-card'
 
 @IonicPage()
 @Component({
@@ -37,7 +38,7 @@ export class RegistrationPage {
         {
           text: 'Verify',
           handler: data => {
-            console.log('Saved clicked');
+            this.navCtrl.setRoot(ScanForCardPage);
           }
         }
       ]
