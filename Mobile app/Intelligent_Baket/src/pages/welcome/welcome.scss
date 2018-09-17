@@ -1,3 +1,24 @@
 page-welcome {
-	background-image: url('../assets/img/store_background.jpg');
+	background: -webkit-linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%); /* Chrome 10+, Saf5.1+ */ background: -moz-linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%); /* FF3.6+ */ background: linear-gradient(360deg, #dee1e1 10%, #f4f4f4 360%); /* W3C */ 
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.my_content{
+	margin-right: 10%!important;
+    margin-left: 10%!important;
+}
+
+.icon_login{
+	margin-left: 50%;
+}
+
+.last_content{
+	position: fixed;
+	bottom:5%;
 }

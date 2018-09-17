@@ -7,25 +7,25 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
 <form>
   <fieldset>
     <legend>Personal information:</legend>
 	    <ion-list>
 
 		  <ion-item>
-		    <ion-label floating>First name</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-label floating>First name* :</ion-label>
+		    <ion-input type="text" [(ngModel)]="fname" name="first_name"></ion-input>
 		  </ion-item>
 
 		  <ion-item>
-		    <ion-label floating>Last name</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-label floating>Last name* :</ion-label>
+		    <ion-input type="text" [(ngModel)]="lname" name="last_name"></ion-input>
 		  </ion-item>
 
 		  <ion-item>
-		    <ion-label floating>Mobile</ion-label>
-		    <ion-input type="number"></ion-input>
+		    <ion-label floating>Mobile* :</ion-label>
+		    <ion-input type="number" [(ngModel)] = "mob" name="mob"></ion-input>
 		  </ion-item>
 		  <br>
 
@@ -37,18 +37,18 @@
 	    <ion-list>
 
 		  <ion-item>
-		    <ion-label floating>First Line</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-label floating>First Line* :</ion-label>
+		    <ion-input type="text" [(ngModel)] = "add1" name="add1"></ion-input>
 		  </ion-item>
 
 		  <ion-item>
-		    <ion-label floating>Second Line</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-label floating>Second Line :</ion-label>
+		    <ion-input type="text" [(ngModel)] = "add2" name="add2"></ion-input>
 		  </ion-item>
 
 		  <ion-item>
-		    <ion-label floating>Third Line</ion-label>
-		    <ion-input type="text"></ion-input>
+		    <ion-label floating>Third Line :</ion-label>
+		    <ion-input type="text" [(ngModel)] = "add3" name="add3"></ion-input>
 		  </ion-item>
 
 		</ion-list>
@@ -61,3 +61,5 @@
 </button>
 
 </ion-content>
+<ion-footer>
+</ion-footer>

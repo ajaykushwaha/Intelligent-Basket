@@ -1,0 +1,8 @@
+openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -nodes \ -out rsa_cert.pem -subj "/CN=unused"
+node cloudiot_mqtt_example_nodejs.js --projectId=the-smart-basket --cloudRegion=asia-east1 --registryId=basket --deviceId=e2e --privateKeyFile=rsa_private.pem --numMessages=25 --algorithm=RS256
+
+openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -nodes -out rsa_cert.pem -subj "/CN=unused"
+
+gcloud pubsub subscriptions pull --auto-ack projects/the-smart-basket/subscriptions/basket-sub
+
+https://smsapi.engineeringtgr.com/send/?Mobile=9890644298&Password=82HNv5X7yi8dcKi&Key=ajayklFOTSHa8rjv6yzbE7K&Message=Your%20OTP%20for%20(Login)Kmart%20is%20367831&To=9890644298
