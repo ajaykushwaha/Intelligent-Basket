@@ -15,3 +15,9 @@ Key:
 riderZP6qKNbBGVMx7fQ
 
 https://smsapi.engineeringtgr.com/send/?Mobile=7709790242&Password=THuD3nAE93Gm9RP&Key=riderZP6qKNbBGVMx7fQ&Message=Your OTP for Kmart is 
+
+https://smsapi.engineeringtgr.com/send/?Mobile=9890644298&Password=82HNv5X7yi8dcKi&Key=ajayklFOTSHa8rjv6yzbE7K&Message=Your OTP for Login in Kmart is 299651&To=9890644298
+
+https://smsapi.engineeringtgr.com/send/?Mobile=7709790242&Password=THuD3nAE93Gm9RP&Key=riderZP6qKNbBGVMx7fQ&Message=Your OTP for  Login in Kmart is 402509&To=9890644298
+
+https://smsapi.engineeringtgr.com/send/?Mobile=7709790242&Password=THuD3nAE93Gm9RP&Key=riderZP6qKNbBGVMx7fQ&Message=Your_OTP_for_Login_in_Kmart_is_403820&To=9890644298

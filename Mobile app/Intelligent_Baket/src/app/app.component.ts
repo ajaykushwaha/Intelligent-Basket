@@ -8,7 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile'
 import { CartPage } from '../pages/cart/cart'
 import { WelcomePage } from '../pages/welcome/welcome'
-
+import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
 
 
 @Component({
@@ -29,7 +29,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'My List', component: ListPage },
       { title: 'My profile', component: ProfilePage },
-      { title: 'My Cart', component:CartPage}
+      { title: 'My Cart', component:CartPage},
+      { title: 'Manage Cards', component:ScanForCardPage},
     ];
 
   }

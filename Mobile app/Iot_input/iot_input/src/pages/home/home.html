@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+
+      <ion-item>
+        <ion-label floating>Name of Product :</ion-label>
+        <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Quantity (ltrs/kgs):</ion-label>
+        <ion-input type="text" [(ngModel)]="quant" name="quant"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Price :</ion-label>
+        <ion-input type="number" [(ngModel)] = "price" name="price"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Discount :</ion-label>
+        <ion-input type="number" [(ngModel)] = "disc" name="disc"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Number of products available:</ion-label>
+        <ion-input type="text" [(ngModel)]="num" name="num"></ion-input>
+      </ion-item>
+
+      <br>
+
+    </ion-list>
+
+    <button ion-button icon-end full large style="background-color:red " (click)="addProduct()">
+      Add product
+      <ion-icon name="add" ></ion-icon>
+    </button>
+</ion-content>

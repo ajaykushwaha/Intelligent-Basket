@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label >id :</ion-label>
+        <ion-input type="text" [(ngModel)]="id" name="id"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-end full round style="background-color:red " (click)="delProduct()">
+      Delete
+      <ion-icon name="trash" ></ion-icon>
+  </button>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+   
+  
+  <br><br><br>
+  <table id="excelDataTable" border="1">
+ </table>
+</ion-content>

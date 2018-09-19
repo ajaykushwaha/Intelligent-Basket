@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { ScanForCardPage } from  '../scan-for-card/scan-for-card'
+import { HomePage } from  '../home/home'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ToastController } from 'ionic-angular';
@@ -123,7 +123,7 @@ export class RegistrationPage {
           handler: data => {
             if(data.otp_input.localeCompare(this.otp)==0)
             {
-              this.navCtrl.setRoot(ScanForCardPage);
+              this.navCtrl.setRoot(HomePage);
             }
             else
             {
@@ -139,8 +139,10 @@ export class RegistrationPage {
       console.log(this.otp.valueOf());
       this.url = this.url.concat(this.otp.valueOf().concat("&To=".concat(this.mob.valueOf())));
        $.ajax({
+      crossDomain: true,   
       url: this.url,
-      method: "POST" 
+      method: "POST" ,
+      dataType: "jsonp"
       }).done(function(res){
          console.log(res);        
       }).fail(function(err){

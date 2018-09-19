@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { ScanForCardPage } from  '../scan-for-card/scan-for-card'
+import { HomePage } from  '../home/home'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ToastController } from 'ionic-angular';
@@ -17,7 +17,7 @@ import { RegistrationPage } from '../registration/registration';
 export class WelcomePage {
   otp: String="";
   mob : String = "";
-  url: String = "https://smsapi.engineeringtgr.com/send/?Mobile=7709790242&Password=THuD3nAE93Gm9RP&Key=riderZP6qKNbBGVMx7fQ&Message=Your OTP for Login in Kmart is ";
+  url: String = "";
 
   constructor(public db:AngularFirestore,
     public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,public toastCtrl: ToastController) {
@@ -28,9 +28,9 @@ export class WelcomePage {
   	this.navCtrl.setRoot(RegistrationPage);
   }
 
-  presentToast() {
+  presentToast(the_title:string) {
     const toast = this.toastCtrl.create({
-      message: 'Wrong One Time Password.',
+      message: the_title,
       duration: 3000,
       position: 'top'
     });
@@ -91,11 +91,11 @@ export class WelcomePage {
           handler: data => {
             if(data.otp_input.localeCompare(this.otp)==0)
             {
-              this.navCtrl.setRoot(ScanForCardPage);
+              this.navCtrl.setRoot(HomePage);
             }
             else
             {
-              this.presentToast();     
+              this.presentToast('Wrong One Time Password.');     
               return false;        
             }
           }
@@ -105,6 +105,7 @@ export class WelcomePage {
     prompt.present();
 
       console.log(this.otp.valueOf());
+      this.url = "https://smsapi.engineeringtgr.com/send/?Mobile=7709790242&Password=THuD3nAE93Gm9RP&Key=riderZP6qKNbBGVMx7fQ&Message=Your_OTP_for_Login_in_Kmart_is_";
       this.url = this.url.concat(this.otp.valueOf().concat("&To=".concat(this.mob.valueOf())));
        $.ajax({
       url: this.url,
@@ -114,6 +115,7 @@ export class WelcomePage {
       }).fail(function(err){
          console.log(err); 
       });
+
     }
     
   }
