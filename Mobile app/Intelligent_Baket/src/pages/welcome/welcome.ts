@@ -23,6 +23,8 @@ export class WelcomePage {
     public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,public toastCtrl: ToastController) {
   }
 
+
+
   GoToRegistrationPage()
   {
   	this.navCtrl.setRoot(RegistrationPage);

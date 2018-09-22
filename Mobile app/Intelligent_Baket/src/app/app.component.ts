@@ -9,7 +9,7 @@ import { ProfilePage } from '../pages/profile/profile'
 import { CartPage } from '../pages/cart/cart'
 import { WelcomePage } from '../pages/welcome/welcome'
 import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
-
+import { MapPage } from '../pages/map/map';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +17,7 @@ import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WelcomePage;
+  rootPage: any = MapPage;
 
   pages: Array<{title: string, component: any}>;
 

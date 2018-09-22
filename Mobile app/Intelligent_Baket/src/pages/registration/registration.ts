@@ -5,6 +5,8 @@ import { HomePage } from  '../home/home'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ToastController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
 import * as $ from "jquery";
 
 @IonicPage()
@@ -23,11 +25,22 @@ export class RegistrationPage {
   url: String = "https://smsapi.engineeringtgr.com/send/?Mobile=7709790242&Password=THuD3nAE93Gm9RP&Key=riderZP6qKNbBGVMx7fQ&Message=Your OTP for Registration in Kmart is ";
   
   constructor(public db:AngularFirestore,
-    public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,public toastCtrl: ToastController) {
+    public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,public toastCtrl: ToastController,private storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistrationPage');
+  }
+
+  storedetail()
+  {
+    this.storage.set('fname', this.fname);
+    this.storage.set('lname', this.lname);
+    this.storage.set('mob', this.mob);
+    this.storage.set('add1', this.add1);
+    this.storage.set('add2', this.add2);
+    this.storage.set('add3', this.add3);
+
   }
 
   presentToast() {
@@ -81,8 +94,7 @@ export class RegistrationPage {
     }
     else
     {
-      this.MyAlert('First Name Error',"Enter a  proper and Non-Empty First name");
-    }  
+      this.MyAlert('First Name Error',"Enter a  proper and Non-Empty First name");}  
     
     return false;
   }
@@ -100,6 +112,7 @@ export class RegistrationPage {
       
     });
    
+   this.storedetail();
    this.otp = String(this.randomInt(100000, 999999));
     const prompt = this.alertCtrl.create({
       title: 'Verify OTP',

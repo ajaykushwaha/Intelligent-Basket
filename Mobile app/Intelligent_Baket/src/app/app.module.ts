@@ -11,10 +11,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { WelcomePage } from '../pages/welcome/welcome'
 import { RegistrationPage } from '../pages/registration/registration';
 import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
+import { MapPage } from '../pages/map/map';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { IonicStorageModule } from '@ionic/storage';
 
 
  var config = {
@@ -35,7 +37,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     CartPage,
     WelcomePage,
     RegistrationPage,
-    ScanForCardPage
+    ScanForCardPage,
+    MapPage
 
   ],
  
@@ -44,7 +47,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
      
 
   ],
@@ -57,7 +64,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     CartPage,
     WelcomePage,
     RegistrationPage,
-    ScanForCardPage
+    ScanForCardPage,
+    MapPage
   ],
   providers: [
     StatusBar,

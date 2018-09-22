@@ -84,4 +84,5 @@
     <plugin name="cordova-plugin-qrscanner" spec="^2.6.0" />
     <plugin name="phonegap-plugin-barcodescanner" spec="^8.0.0" />
     <plugin name="cordova-sms-plugin" spec="^0.1.13" />
+    <plugin name="cordova-sqlite-storage" spec="^2.4.0" />
 </widget>

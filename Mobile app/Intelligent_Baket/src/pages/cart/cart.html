@@ -14,19 +14,7 @@
 
 
 <ion-content>
-<div padding>
-  <ion-segment [(ngModel)]="cart">
-    <ion-segment-button value="unbilled">
-      Un-billed Items
-    </ion-segment-button>
-    <ion-segment-button value="purchased">
-      Purchased Items
-    </ion-segment-button>
-  </ion-segment>
-</div>
-
-<div [ngSwitch]="cart">
-  <div *ngSwitchCase="'unbilled'">
+  
   	<h3 id="home-heading1" style="color:red;text-align: center;">Items in My Cart ({{ItemsInCart.length}})
 	  	</h3>
 		<hr>
@@ -46,14 +34,11 @@
 	  <div class="last_but">
 	  <span class="tplabel"><span>Total Price = </span><span >2000</span></span>
 	  <button ion-button color="light" round style="float: right;right: 10%;">Pay</button>
-	  </div>
-  </div>
+	  </div>	
 
-  <div *ngSwitchCase="'purchased'">
-    
-  </div>
-</div>	
-
+<ion-fab top right edge>
+    <button ion-fab color="danger" (click)="showMap()"><ion-icon name="map" ></ion-icon></button>
+</ion-fab>    
 
 
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
-
+import { ModalController } from 'ionic-angular';
+import { MapPage } from '../map/map';
 
 
 @Component({
@@ -13,8 +14,14 @@ export class CartPage {
 
   ItemsInCart: string[][];	
   cart : string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
   	this.initializeItems();
+  }
+
+
+  showMap() {
+    const modal = this.modalCtrl.create(MapPage);
+    modal.present();
   }
 
 
