@@ -9,7 +9,18 @@ import * as $ from "jquery";
 })
 export class MapPage {
 
+  ItemsList: string[];
+  ItemsListTemp: string[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.ItemsList = [
+      'Amsterdam',
+      'aogota',
+      'aata',
+      'aata',
+      'aaggie',
+      'aater'
+    ];
   }
 
   ionViewDidLoad() 
@@ -44,4 +55,22 @@ export class MapPage {
   {
   	this.navCtrl.pop();
   }
+
+  getItemsInMap(ev: any) 
+  {
+    this.ItemsListTemp = Object.assign([],this.ItemsList);
+    const val = ev.target.value;
+    if (val && val.trim() != '') 
+    {
+      this.ItemsListTemp = this.ItemsListTemp.filter((item) => {
+        return (item.toLowerCase().startsWith(val.toLowerCase()));
+      }).slice(0,3);
+    }
+    else
+    {
+      this.ItemsListTemp = []; 
+    }  
+
+  }
 }
+

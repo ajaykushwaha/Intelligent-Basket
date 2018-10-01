@@ -17,10 +17,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { RegistrationPage } from '../pages/registration/registration';
 import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
+import { MapPage } from '../pages/map/map';
+import { BillsPage } from '../pages/bills/bills';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 var config = {
     apiKey: "AIzaSyB3XMaD98uIQ5G8-XToXlQkZ8oDFoV2RPc",
     authDomain: "the-smart-basket.firebaseapp.com",
@@ -42,7 +45,9 @@ var AppModule = /** @class */ (function () {
                 CartPage,
                 WelcomePage,
                 RegistrationPage,
-                ScanForCardPage
+                ScanForCardPage,
+                MapPage,
+                BillsPage
             ],
             imports: [
                 BrowserModule,
@@ -60,7 +65,9 @@ var AppModule = /** @class */ (function () {
                 CartPage,
                 WelcomePage,
                 RegistrationPage,
-                ScanForCardPage
+                ScanForCardPage,
+                MapPage,
+                BillsPage
             ],
             providers: [
                 StatusBar,

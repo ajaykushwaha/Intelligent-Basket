@@ -18,7 +18,6 @@ export class CartPage {
   	this.initializeItems();
   }
 
-
   showMap() {
     const modal = this.modalCtrl.create(MapPage);
     modal.present();

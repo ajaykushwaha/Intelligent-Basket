@@ -10,6 +10,7 @@ import { CartPage } from '../pages/cart/cart'
 import { WelcomePage } from '../pages/welcome/welcome'
 import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
 import { MapPage } from '../pages/map/map';
+import { BillsPage } from '../pages/bills/bills';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,7 @@ import { MapPage } from '../pages/map/map';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = MapPage;
+  rootPage: any = BillsPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -31,6 +32,7 @@ export class MyApp {
       { title: 'My profile', component: ProfilePage },
       { title: 'My Cart', component:CartPage},
       { title: 'Manage Cards', component:ScanForCardPage},
+      { title: 'My Bills', component:BillsPage},
     ];
 
   }

@@ -12,6 +12,7 @@ import { WelcomePage } from '../pages/welcome/welcome'
 import { RegistrationPage } from '../pages/registration/registration';
 import { ScanForCardPage } from '../pages/scan-for-card/scan-for-card';
 import { MapPage } from '../pages/map/map';
+import { BillsPage } from '../pages/bills/bills';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -38,7 +39,8 @@ import { IonicStorageModule } from '@ionic/storage';
     WelcomePage,
     RegistrationPage,
     ScanForCardPage,
-    MapPage
+    MapPage,
+    BillsPage
 
   ],
  
@@ -65,7 +67,8 @@ import { IonicStorageModule } from '@ionic/storage';
     WelcomePage,
     RegistrationPage,
     ScanForCardPage,
-    MapPage
+    MapPage,
+    BillsPage
   ],
   providers: [
     StatusBar,

@@ -22,6 +22,13 @@
 <!-- width='276',height='511' -->
 
 <ion-content>
+    <ion-searchbar (ionInput)="getItemsInMap($event)"></ion-searchbar>
+    <div *ngFor="let item of ItemsListTemp ;let i = index" >
+      <ul>
+        <li  (click)="addItems($event)" id="{{ 'OutListItem' + i }}">{{ item }}</li>
+    </ul>
+    </div>
+
 	<div class="container_">
 	<h1 style="margin: 0px;"><ion-icon name="pin" class="pinner" style="color: red;"></ion-icon></h1>	
 	<img src="../assets/img/map.JPG" style="z-index:1" class="base_map">
