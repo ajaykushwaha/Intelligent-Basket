@@ -1,8 +1,1 @@
- from firebase import firebase  
-firebase = firebase.FirebaseApplication('https://xxxxx.firebaseio.com/', None)  
-data =  { 'Name': 'Vivek',  
-          'RollNo': 1,  
-          'Percentage': 76.02  
-          }  
-result = firebase.post('/python-sample-ed7f7/Students/',data)  
-print(result)
+https://the-smart-basket.firebaseio.com/
