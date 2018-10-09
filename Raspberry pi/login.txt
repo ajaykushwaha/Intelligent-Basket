@@ -1,0 +1,12 @@
+Login ID : pi@raspberrypi.local
+Password : raspberry
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+network={
+  ssid="NETWORK"
+  psk="PASSWORD"
+}
+sudo wpa_cli reconfigure
+ifconfig wlan0
+
+
+vncserver pass = ajay123
