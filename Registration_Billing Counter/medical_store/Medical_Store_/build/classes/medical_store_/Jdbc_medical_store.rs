@@ -1,1 +1,0 @@
-Jdbc_medical_store
