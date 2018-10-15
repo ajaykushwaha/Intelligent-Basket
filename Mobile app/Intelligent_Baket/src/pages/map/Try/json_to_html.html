@@ -1,0 +1,44 @@
+<HTML>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+.pinner{
+	height: 5% ;
+	z-index:2;
+	position:absolute;
+	
+}
+.container{
+	position:relative;
+}
+.base_map{
+	position:absolute;
+}
+</style>
+<body style="margin: 0px;">
+<div class="container">
+<img src="map.JPG" style="z-index:1" class="base_map">
+
+<script>
+	//[319, 1145]
+	$(window).resize(function(){
+		$(".base_map").width($('body').innerWidth());
+	});
+	$(document).ready(function()
+		{
+			$(".base_map").width($('body').innerWidth());
+			$("img").click(function(e){
+				console.log([e.pageX,e.pageY]);
+				if( $('.pinner').length )
+				{
+					 $('.pinner').remove();
+				}
+				$("body").append("<img src=\"pin_loc.png\" class=\"pinner\" style=\"top:"+(1145)+"px; left:"+(319)+"px\">");
+			});
+		}
+	)
+</script>
+</div>
+</body>
+</HTML>
