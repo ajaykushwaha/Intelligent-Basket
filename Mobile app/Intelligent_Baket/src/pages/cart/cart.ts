@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { MapPage } from '../map/map';
-
+import { Firebase } from '@ionic-native/firebase';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'page-cart',
@@ -14,7 +15,7 @@ export class CartPage {
 
   ItemsInCart: string[][];	
   cart : string;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController,private firebase: Firebase,private db:AngularFirestore) {
   	this.initializeItems();
   }
 
@@ -23,7 +24,12 @@ export class CartPage {
     modal.present();
   }
 
-
+  ionViewDidLoad() {
+    this.db.collection('User_details').add({
+      'First_name':"haha",
+      'Last_name':"papa",
+    });
+  }
   initializeItems()
   {
   	this.ItemsInCart = [

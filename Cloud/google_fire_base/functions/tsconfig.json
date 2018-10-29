@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "lib": ["es6"],
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
+}
+
+
+{
+  "item_description":{
+  "101880":{
+  "Name":"India Gate Rice",
+  "Quantity":"5kg",
+  "Price":"400"
+  }
+  }
+  
+  "basket":{
+  "barcodes":{}
+  }
+  
+  "card_no" : {
+    "136_4_99_69" : {
+      "Mobile_No" : 9890644298,
+      "Name" : "Ajay Kushwaha"
+    },
+    "145_122_233_47" : {
+      "Mobile_No" : 9865321470,
+      "Name" : "Gokul Kombath"
+    },
+    "196_241_45_131" : {
+      "Mobile_No" : 7412589603,
+      "Name" : "Saundarya"
+    }
+  }
+}
+
+
+

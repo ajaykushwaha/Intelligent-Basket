@@ -18,7 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { IonicStorageModule } from '@ionic/storage';
-
+import { Firebase } from '@ionic-native/firebase';
 
  var config = {
     apiKey: "AIzaSyB3XMaD98uIQ5G8-XToXlQkZ8oDFoV2RPc",
@@ -74,6 +74,7 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    Firebase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
