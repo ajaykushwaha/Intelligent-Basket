@@ -9,3 +9,18 @@ We have designed a smart trolley in such a manner that every customer can manage
 4. 10V Battery Kit
 5. Iball Barcode Scanner	
 6. Customised Basket
+
+## Full Hardware
+![alt text](/Documentation/1.jpg)
+
+## Lcd Screen 1
+![alt text](/Documentation/2.jpg)
+
+## Lcd Screen 2
+![alt text](/Documentation/3.jpg)
+
+## Lcd Screen 3
+![alt text](/Documentation/4.jpg)
+
+## Mobile Application
+![alt text](/Documentation/7.jpg)
